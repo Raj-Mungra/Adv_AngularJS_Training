@@ -1,0 +1,11 @@
+.img-center {margin:0 auto;}
+
+.input-group-addon{
+
+    min-width: 165px;
+    text-align: center;
+}
+
+.input-group .form-control{
+    width: 400px;
+}

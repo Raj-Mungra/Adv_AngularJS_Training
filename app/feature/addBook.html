@@ -1,0 +1,28 @@
+<div>
+    <h1>{{titleOfPage}}</h1>
+
+    <form name="AddNewBookForm" >
+    <div class="input-group">
+            <span class="input-group-addon">Enter Title of Book : </span>
+            <input id="title" type="text" class="form-control" name="title" placeholder="Title of Book" ng-model="title" required>
+            <span style="color:red" ng-show="AddNewBookForm.title.$touched && AddNewBookForm.title.$invalid">Title is required.</span>
+    </div>
+    <br>
+
+    <div class="input-group">
+            <span class="input-group-addon">Enter Year of Publish : </span>
+            <input id="year" type="number" class="form-control" name="year" placeholder="Year of Publish" ng-model="year" ng-min="1950" max="2017" required>
+            <span style="color:red" ng-show="AddNewBookForm.year.$touched && AddNewBookForm.year.$invalid">Year is required.</span>  
+    </div>
+    <br>
+
+    <div class="checkbox">
+        <label><input type="checkbox" ng-model="favorite">Favorite</label>
+    </div>
+    
+    <br>
+    <div class="text-center" style="width:500px">
+        <button type="button" class="btn" ng-if="!id" ng-click="postBookRecord()" ng-disabled="AddNewBookForm.title.$invalid || AddNewBookForm.year.$invalid">Add</button>
+        <button type="button" class="btn" ng-if="id" ng-click="updateBookRecord()" ng-disabled="AddNewBookForm.title.$invalid || AddNewBookForm.year.$invalid">Update</button>
+    </div>
+</div> 

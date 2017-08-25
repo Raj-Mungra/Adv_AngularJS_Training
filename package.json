@@ -1,0 +1,15 @@
+{
+  "name": "angular-basic",
+  "version": "1.0.0",
+  "description": "basic",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp connect"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {  
+    "gulp": "^3.9.1",
+    "gulp-connect-multi": "^1.0.8" 
+  }
+}

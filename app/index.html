@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<link rel="stylesheet" href="style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-route.js"></script>
+</head>
+   
+<body ng-app="myApp">
+<div class="container">
+  <div class="page-header">
+      <h2> Advance AngularJS Assignment
+  </div>
+ </div>
+<div>
+<ul class="nav nav-pills nav-stacked col-xs-2 text-center">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#GetBookList">Get Book List</a></li>
+  <li><a href="#AddBook">Add New Book</a></li>
+  <!-- <li><a href="#EditBook">Edit Book Record</a></li> -->
+  
+</ul>
+</div>
+
+<div class= "col-xs-8">
+   <div ng-view></div>
+</div>
+
+<script src="app.js"></script>
+
+<!-- <script src="directives/tableDirective.js"></script>   -->
+
+<script src="controllers/getBookController.js"></script>
+
+<script src="controllers/addBookController.js"></script>
+
+<script src="controllers/editBookController.js"></script>
+</body>
+</html>
