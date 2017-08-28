@@ -1,4 +1,4 @@
-angular.module("myApp").controller("editBook",function($scope,$http,$routeParams,$location){
+angular.module("myApp").controller("editBook",function($scope,$http,$routeParams,$location,apiService){
         $scope.id;
         $scope.titleOfPage="Edit Book Record";
        
@@ -10,8 +10,8 @@ angular.module("myApp").controller("editBook",function($scope,$http,$routeParams
         $scope.getId();
 
         $scope.getBookDetails = function(){
-           $http.get('http://localhost:4000/api/book/'+$scope.id).then(function(response) {  
-                $scope.getBookRecord = response.data;  
+            var result = apiService.GetRecordApiCall($scope.id).success(function(data){  
+                $scope.getBookRecord = data;  
                
                 $scope.title = $scope.getBookRecord.title;
                 $scope.year = $scope.getBookRecord.year;
@@ -31,8 +31,10 @@ angular.module("myApp").controller("editBook",function($scope,$http,$routeParams
             id : $scope.id
             
         }
-        $http.put('http://localhost:4000/api/books', JSON.stringify(putData)).then(function(response) {  
-               console.log(response);  
+
+
+         var result = apiService.PutApiCall(putData).success(function(data){ 
+               console.log(data);  
                 $location.path('/GetBookList');
             }); 
 

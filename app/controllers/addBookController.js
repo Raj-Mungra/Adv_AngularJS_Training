@@ -1,4 +1,4 @@
-angular.module("myApp").controller("addBook",function($scope,$http){
+angular.module("myApp").controller("addBook",function($scope,$http,$location,apiService){
 
 
     $scope.titleOfPage="Add New Book Record";
@@ -20,8 +20,8 @@ angular.module("myApp").controller("addBook",function($scope,$http){
             year : $scope.year
             
         }
-        $http.post('http://localhost:4000/api/books', JSON.stringify(postData)).then(function(response) {  
-               console.log(response);  
+        var result = apiService.PostApiCall(postData).success(function(data){  
+               console.log(data);  
                $scope.clearData();
                 $location.path('/GetBookList');
             });  
