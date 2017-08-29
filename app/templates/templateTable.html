@@ -1,4 +1,4 @@
- <table class="table table-hover">
+ <table id="tbl" class="table table-hover">
             <tr>
                 <th>Id</th>
                 <th>Title Of Book</th>
@@ -8,10 +8,10 @@
             </tr>
 
             <tr ng-repeat="x in list">
-                    <td>{{ x.id }}</td>
-                    <td><a href='#EditBook/{{x.id}}'>{{ x.title }}</a></td>
-                    <td>{{ x.year }}</td>
-                    <td>{{ x.favorite }}</td>
-                    <td><a href='' ng-click='onDelete({param: x.id})'>Delete</a></td>
+                    <td id="itemId">{{ x.id }}</td>
+                    <td id="title"><a id="edit" href='#EditBook/{{x.id}}'>{{ x.title }}</a></td>
+                    <td id="year">{{ x.year }}</td>
+                    <td id="favorite">{{ x.favorite }}</td>
+                    <td id="deleteOprn"><a id="delete" href='' ng-click='onDelete({param: x.id})'>Delete</a></td>
             </tr>
  </table>
