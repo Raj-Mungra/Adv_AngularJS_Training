@@ -1,5 +1,1 @@
-[5156:8232:0829/210204.656:WARNING:extension_service.cc(474)] Loading extension specified by --load-component-extension as a regular extension. Extensions specified by --load-component-extension will not be loaded starting in M58. Use --load-extension or --disable-extensions-except.
-[5156:8232:0829/210204.711:INFO:easy_unlock_service_regular.cc(446)] Initializing EasyUnlockService inside the user session.
-[5156:8232:0829/210214.916:INFO:CONSOLE(24)] "OK", source: http://localhost:8888/controllers/addBookController.js (24)
-[5156:8232:0829/210222.145:INFO:CONSOLE(18)] "Successfully Deleted", source: http://localhost:8888/controllers/getBookController.js (18)
-[5156:8232:0829/210235.540:INFO:CONSOLE(37)] "OK", source: http://localhost:8888/controllers/editBookController.js (37)
+[6976:5128:0901/210612.185:INFO:easy_unlock_service_regular.cc(446)] Initializing EasyUnlockService inside the user session.

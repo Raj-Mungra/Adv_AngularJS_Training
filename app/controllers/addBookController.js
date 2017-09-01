@@ -6,6 +6,14 @@ angular.module("myApp").controller("addBook",function($scope,$http,$location,api
     
     $scope.favorite = false;
 
+     $scope.onSuccess = function(response){
+           $location.path('/GetBookList');
+    }
+
+    $scope.onFailure = function(error){
+      
+    }
+
      $scope.clearData = function(){
         $scope.favorite.checked = false;
         $scope.title = "";
@@ -20,10 +28,13 @@ angular.module("myApp").controller("addBook",function($scope,$http,$location,api
             year : $scope.year
             
         }
-        var result = apiService.PostApiCall(postData).success(function(data){  
-               console.log(data);  
-               $scope.clearData();
-                $location.path('/GetBookList');
-            });  
+        // var result = apiService.PostApiCall(postData).success(function(data){  
+        //        console.log(data);  
+        //        $scope.clearData();
+        //         $location.path('/GetBookList');
+        //     }); 
+        var result = apiService.PostApiCall(postData,$scope.onSuccess,$scope.onFailure)  
+              
+           
     }
 });

@@ -9,7 +9,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/node_modules/protractor/bin/protractor",
+            "program": "C:/Users/raj.mungra/AppData/Roaming/npm/node_modules/protractor/bin/protractor",
             "args": ["${workspaceRoot}/conf.js"]
         }
     ]

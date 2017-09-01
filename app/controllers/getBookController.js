@@ -1,27 +1,41 @@
 var app = angular.module("myApp");
 app.controller("getBookList", function ($scope, $http, apiService) {
 
+ $scope.favorite ='false';
 
   $scope.getList;
 
+  // $scope.testFunction = function(){
+
+  //   $scope.getList = 'true';
+  // }
+
+  $scope.onSuccess = function onSuccess(response){
+      $scope.getList = response.data;
+  }
+
+  $scope.onFailure = function(error){
+      
+  }
+
   $scope.getBookList = function () {
 
-    var result = apiService.GetApiCall().success(function (data) {
-      $scope.getList = data;
+    var result = apiService.GetApiCall($scope.onSuccess, $scope.onFailure);//.success(function (data) {
+      //$scope.getList = data;
       // console.log(data)
-    });
+    //});
   }
   $scope.getBookList();
 
   $scope.deleteBook = function (id) {
-    var result = apiService.DeleteApiCall(id).success(function (data) {
-      console.log("Successfully Deleted");
-    });
-
-    $scope.getBookList();
+    // var result = apiService.DeleteApiCall(id).success(function (data) {
+    //   console.log("Successfully Deleted");
+    // });
+    var result = apiService.DeleteApiCall(id,$scope.onSuccess, $scope.onFailure);
+      $scope.getBookList();
   }
 
-});
+ });
 
 app.directive("myDirective", function () {
   return {

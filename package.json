@@ -8,8 +8,14 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {  
+  "devDependencies": {
+    "angular-mocks": "^1.6.6",
     "gulp": "^3.9.1",
-    "gulp-connect-multi": "^1.0.8" 
+    "gulp-connect-multi": "^1.0.8",
+    "jasmine-core": "^2.8.0",
+    "karma-jasmine": "^1.1.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.6"
   }
 }
