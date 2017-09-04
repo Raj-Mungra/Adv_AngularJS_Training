@@ -23,8 +23,8 @@ module.exports = function(config) {
       './app/**/*Spec.js',
       './app/services/apiServices.js',
       'app/controllers/addBookController.js',
-      'app/controllers/editBookController.js'
-      // 'app/controllers/getBookController.js'
+      'app/controllers/editBookController.js',
+      'app/controllers/getBookController.js'
     ],
 
 

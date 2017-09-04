@@ -1,1 +1,2 @@
-[6976:5128:0901/210612.185:INFO:easy_unlock_service_regular.cc(446)] Initializing EasyUnlockService inside the user session.
+[5900:4156:0904/100117.568:INFO:easy_unlock_service_regular.cc(446)] Initializing EasyUnlockService inside the user session.
+[5900:5924:0904/100118.558:ERROR:cache_storage_cache.cc(1458)] Cache size: 233675 does not match size from index: 234169
